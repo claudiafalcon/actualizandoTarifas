@@ -73,7 +73,7 @@ BEGIN
       EXECUTE IMMEDIATE 'ALTER TABLE NKADM.ROM_RP_TARIFAS_HIST ADD (
                         CONSTRAINT FK_FILE_ID
                         FOREIGN KEY (FILE_id)
-                        REFERENCES NKADM.ROM_TARIFAS_RP_FILES_HIST (FILE_id))';
+                        REFERENCES NKADM.ROM_TARIFAS_RP_FILES (FILE_id))';
   end if;
 
 
