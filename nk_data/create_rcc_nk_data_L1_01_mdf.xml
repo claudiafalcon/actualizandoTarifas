@@ -10,7 +10,7 @@
 
 	<EMS Extension=".sql">MAPPING_TABLES_DLL.sql</EMS>
 	<EMS Extension=".sql">LOADING_TARIFF_DLL</EMS>
-	<EMS Extension=".sql">0003_NK_CONTROL_UTL_PKG</EMS>
+
 
 
 </DMF_DEFINITION>
