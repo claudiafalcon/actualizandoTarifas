@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   =============================================================================
+         Origins: Ericsson Telekommunikation GmbH & Co KG
+          Author: R&D Database Team, Frankfurt
+            Date: 03-Nov-2015
+         Version: "@(#) ./lhsj_main/bscs/database/share/standard_3_par.xml, , BSCSIX_16.0_GA, BSCSIX_16.0_GA_151205 65151e2151680dd4b5e273ad65cfe1aa26546d92 4-Dec-2015"
+         Purpose: Parameter definition file
+
+    Copyright (c) Ericsson, 2015.  All rights reserved.
+
+    The copyright in this work is vested in Ericsson.
+    The information contained in this work (either in whole or in part)
+    is confidential and must not be modified, reproduced, disclosed or
+    disseminated to others or used for purposes other than that for which
+    it is supplied, without the prior written permission of Ericsson.
+    If this work or any part hereof is furnished to a third party by
+    virtue of a contract with that party, use of this work by such party
+    shall be governed by the express contractual terms between Ericsson, which
+    is party to that contract and the said party.
+
+    The information in this document is subject to change without notice
+    and should not be construed as a commitment by Ericsson. Ericsson assumes no
+    responsibility for any errors that may appear in this document. With
+    the appearance of a new version of this document all older versions
+    become invalid.
+
+   =============================================================================
+-->
+
+<DMF_PARAMETER_LIST xmlns="BSS:Telco:Main:DataMigrationFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Parameter.xsd">
+
+   <PARA xsi:type="PString" Key="PARA_TABLE_STORAGE_COC_BALANCE_VALUE">
+      <DEF_VALUE>PARTITION BY RANGE(FAMILY_GROUP_ID) INTERVAL(1)(PARTITION COCBALVAL_P1 VALUES LESS THAN(2),PARTITION COCBALVAL_P2 VALUES LESS THAN(3), PARTITION COCBALVAL_P3 VALUES LESS THAN(4)) ENABLE ROW MOVEMENT</DEF_VALUE>
+      <DESC Language="US">Table COC_BALANCE_VALUE storage parameter</DESC>
+   </PARA>
+   
+   <PARA xsi:type="PString" Key="PARA_TABLE_STORAGE_COC_BALANCE_PROCESS_INFO">
+      <DEF_VALUE>PARTITION BY RANGE(FAMILY_GROUP_ID) INTERVAL(1)(PARTITION COCBALPI_P1 VALUES LESS THAN(2),PARTITION COCBALPI_P2 VALUES LESS THAN(3),PARTITION COCBALPI_P3 VALUES LESS THAN(4)) ENABLE ROW MOVEMENT</DEF_VALUE>
+      <DESC Language="US">Table COC_BALANCE_PROCESS_INFO storage parameter</DESC>
+   </PARA>
+   
+   <PARA xsi:type="PString" Key="PARA_TABLE_STORAGE_PURCHASED_BUNDLE">
+      <DEF_VALUE>PARTITION BY RANGE (FAMILY_GROUP_ID) INTERVAL(1) (PARTITION PURBUN_P1 VALUES LESS THAN(2),PARTITION PURBUN_P2 VALUES LESS THAN(3),PARTITION PURBUN_P3 VALUES LESS THAN(4)) ENABLE ROW MOVEMENT</DEF_VALUE>
+      <DESC Language="US">Table PURCHASED_BUNDLE storage parameter</DESC>
+   </PARA>
+
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_BCH_LT_APPEND">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_BCH_ST_APPEND">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_INDEX_STORAGE_BI_ACCOUNTS">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_INDEX_STORAGE_BI_CRED_ACCOUNTS">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_DR_DOCUMENTS">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_TOPUP_REQUEST">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_IC_PARTNER_REPORT_SING">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_IC_PARTNER_REPORT_SUM">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_IC_REPORT_SUM_LT">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_IC_REPORT_SUM_ST">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_LT">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_NU_CHARGES">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_NU_PENDING_CHARGES">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SINGLE_LT">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SINGLE_ST">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_ST">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SUM_BCH_LT_APPEND">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SUM_BCH_ST_APPEND">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SUM_LT">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_SUM_ST">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_TRAFFIC_COUNTER_SINGLE">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PKEY_STORAGE_UDR_TRAFFIC_COUNTER_SUM">
+      <DEF_VALUE>LOCAL </DEF_VALUE>
+   <DESC Language="US"> storage parameter</DESC>
+   </PARA>
+
+</DMF_PARAMETER_LIST>
+
+

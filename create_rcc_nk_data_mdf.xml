@@ -1,0 +1,18 @@
+<DMF_DEFINITION
+    xmlns="BSS:Telco:Main:DataMigrationFramework"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Definition.xsd"
+    Type="SeqUnit"
+    DummyRegistration="false"
+    ReExecution="true"
+    ReInitialize="true">
+
+
+	<!--AMXCO Baseline Add -->
+	<UNIT Name="NKRatingSetup" Type="SetUnit">
+		<MDF Name="nk_data" Directory="nk_data" PathMode="A">
+			create_rcc_nk_data_L1_01_mdf.xml
+		</MDF>
+	</UNIT>
+
+</DMF_DEFINITION>

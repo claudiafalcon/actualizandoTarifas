@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   =============================================================================
+         Origins: Ericsson Telekommunikation GmbH & Co KG
+          Author: R&D Database Team, Frankfurt
+            Date: 03-Nov-2015
+         Version: "@(#) ./lhsj_main/bscs/database/share/standard_1_res.xml, , BSCSIX_16.0_GA, BSCSIX_16.0_GA_151205 65151e2151680dd4b5e273ad65cfe1aa26546d92 4-Dec-2015"
+         Purpose: Resource list file
+
+    Copyright (c) Ericsson, 2015.  All rights reserved.
+
+    The copyright in this work is vested in Ericsson.
+    The information contained in this work (either in whole or in part)
+    is confidential and must not be modified, reproduced, disclosed or
+    disseminated to others or used for purposes other than that for which
+    it is supplied, without the prior written permission of Ericsson.
+    If this work or any part hereof is furnished to a third party by
+    virtue of a contract with that party, use of this work by such party
+    shall be governed by the express contractual terms between Ericsson, which
+    is party to that contract and the said party.
+
+    The information in this document is subject to change without notice
+    and should not be construed as a commitment by Ericsson. Ericsson assumes no
+    responsibility for any errors that may appear in this document. With
+    the appearance of a new version of this document all older versions
+    become invalid.
+
+   =============================================================================
+--><DMF_RESOURCE_LIST xmlns="BSS:Telco:Main:DataMigrationFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Resource.xsd">
+  <RESOURCE ResourceKey="SYSTEM_ADMINISTRATOR" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSTEM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="SYSTEM_ADMINISTRATOR_UDR" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSTEM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="SYSTEM_ADMINISTRATOR_VMD" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSTEM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="SYSTEM_ADMINISTRATOR_MX" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSTEM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="SYSTEM_ADMINISTRATOR_ARC" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSTEM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="REPOSITORY" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> DMF </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="DMF_REPOSITORY" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA>DMFADM</DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="DMF_REPOSITORY_R" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA>DMFADM</DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="BSCS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="UDR" xsi:type="DB_ORACLE">
+    <DB_NAME> RX20AT </DB_NAME>
+    <DB_SCHEMA> SYSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="UDR1" xsi:type="DB_ORACLE">
+    <DB_NAME> RX20AT </DB_NAME>
+    <DB_SCHEMA> SYSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="ARCHIVE_BSCS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> SYSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="ARCHIVE_ARC" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> ARCHIVER </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="VMD" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> VMD </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="CMAP" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> CMAP </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="ORA_APP" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> ORA_APP_USR </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="BIS_ADMIN" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> BISADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="BIS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> BIS </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX_ADMIN" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MXADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MX </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX_ADMIN_BSCS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MXADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX_BSCS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MX </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX_ADMIN_UDR" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MXADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="MX_UDR" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> MX </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="WMS_ADMIN" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> WMSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="WMS" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> WMS </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="OMS_ADMIN" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> OMSADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="JBPM" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> JBPM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE ResourceKey="JBPM_ADMIN" xsi:type="DB_ORACLE">
+    <DB_NAME> EB20AT </DB_NAME>
+    <DB_SCHEMA> JBPMADM </DB_SCHEMA>
+    <DB_PASSWORD> SYSADM </DB_PASSWORD>
+  </RESOURCE>
+  <RESOURCE_SET ResourceKey="BSCS_ARCHIVE" xsi:type="DDB_ORACLE">
+    <RESOURCE ResourceKey="BSCS"/>
+    <RESOURCE ResourceKey="ARCHIVE_ARC"/>
+  </RESOURCE_SET>
+</DMF_RESOURCE_LIST>

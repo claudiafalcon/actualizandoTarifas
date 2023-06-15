@@ -1,0 +1,16 @@
+<DMF_DEFINITION
+    xmlns="BSS:Telco:Main:DataMigrationFramework"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Definition.xsd"
+	Type="SeqUnit"
+    DummyRegistration="false"
+    ReExecution="false"
+    ReInitialize="true">
+
+
+	<EMS Extension=".sql">MAPPING_TABLES_DLL.sql</EMS>
+	<EMS Extension=".sql">LOADING_TARIFF_DLL</EMS>
+	<EMS Extension=".sql">0003_NK_CONTROL_UTL_PKG</EMS>
+
+
+</DMF_DEFINITION>

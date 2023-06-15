@@ -1,0 +1,11 @@
+<DMF_SETUP xmlns="BSS:Telco:Main:DataMigrationFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_SetUp.xsd">
+   <OPTION>
+         <MIG_PROJECT_LABEL>DMF_UpdateTariffNK</MIG_PROJECT_LABEL>
+         <START_UNIT_NAME>NKRatingSetup</START_UNIT_NAME>
+         <TOTAL_PROCESS_NUM>6</TOTAL_PROCESS_NUM>
+         <MIG_LOG_DIR>log</MIG_LOG_DIR>
+   </OPTION>
+   <DEFINE  Name="NKRatingUpdateSetup"  ResourceKey="BSCS" >
+      <DMF_DEFINITION_FILE >create_rcc_nk_data_mdf.xml</DMF_DEFINITION_FILE>
+   </DEFINE>
+</DMF_SETUP>

@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   =============================================================================
+         Origins: Ericsson Telekommunikation GmbH & Co KG
+          Author: R&D Database Team, Frankfurt
+            Date: 03-Nov-2015
+         Version: "@(#) ./lhsj_main/bscs/database/share/standard_1_par.xml, , BSCSIX_16.0_GA, BSCSIX_16.0_GA_151205 65151e2151680dd4b5e273ad65cfe1aa26546d92 4-Dec-2015"
+
+    Copyright (c) Ericsson, 2015.  All rights reserved.
+
+    The copyright in this work is vested in Ericsson.
+    The information contained in this work (either in whole or in part)
+    is confidential and must not be modified, reproduced, disclosed or
+    disseminated to others or used for purposes other than that for which
+    it is supplied, without the prior written permission of Ericsson.
+    If this work or any part hereof is furnished to a third party by
+    virtue of a contract with that party, use of this work by such party
+    shall be governed by the express contractual terms between Ericsson, which
+    is party to that contract and the said party.
+
+    The information in this document is subject to change without notice
+    and should not be construed as a commitment by Ericsson. Ericsson assumes no
+    responsibility for any errors that may appear in this document. With
+    the appearance of a new version of this document all older versions
+    become invalid.
+
+   =============================================================================
+-->
+<DMF_PARAMETER_LIST xmlns="BSS:Telco:Main:DataMigrationFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Parameter.xsd">
+
+<!--		       General parameters         -->
+
+<!--		Tablespace's parameters		-->
+   <PARA xsi:type="PString" Key="PARA_DEFAULT_TABLESPACE">
+      <DEF_VALUE>DATA</DEF_VALUE>
+      <DESC Language="US">Default tablespace for new users</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_TEMPORARY_TABLESPACE">
+      <DEF_VALUE>TEMP</DEF_VALUE>
+      <DESC Language="US">Temporary tablespace for new users</DESC>
+   </PARA>
+<!--     Internal parameters, used by DMF parallel processing. No configuration needed. -->
+   <PARA xsi:type="PNumber" Key="PARA_SEGMENT_NUMBER">
+      <DEF_VALUE>1</DEF_VALUE>
+      <DESC Language="US">Parameter for parallel processing - Current segment number</DESC>
+   </PARA>
+   <PARA xsi:type="PNumber" Key="PARA_TOTAL_SEGMENT_NUMBER">
+      <DEF_VALUE>1</DEF_VALUE>
+      <DESC Language="US">Parameter for parallel processing - Total number of segments</DESC>
+   </PARA>
+<!--        BSCS & UDR resource keys    -->
+   <PARA xsi:type="PResource" Key="PARA_BSCS">
+      <DEF_VALUE>BSCS</DEF_VALUE>
+      <DESC>Name of the BSCS Resource key from the resource list.</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_UDR">
+      <DEF_VALUE>UDR</DEF_VALUE>
+      <DESC>Name of the UDR Resource key from the resource list.</DESC>
+   </PARA>
+<!--   Setup of For Purge and Archive Database     -->
+   <PARA xsi:type="PResource" Key="PARA_ARCHIVE_BSCS">
+      <DEF_VALUE>ARCHIVE_BSCS</DEF_VALUE>
+      <DESC>Name of the Purge and Archive Resource key from the resource list.</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_ARCHIVE_ARC">
+      <DEF_VALUE>ARCHIVE_ARC</DEF_VALUE>
+      <DESC>Name of the Purge and Archive Resource key from the resource list.</DESC>
+   </PARA>
+<!--   Standard and Addon Component's parameters   -->
+   <PARA xsi:type="PString" Key="BSCS">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Presence of the standard component BSCS</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="UDR">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Presence of the standard component UDR</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="VMD">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Presence of the addon component VMD</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="ORA">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Presence of the addon component ORA</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="CMAP">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Presence of the addon component CMAP</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PURGE_ARCHIVE">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Presence of the Purge and Archive feature</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="BUMT">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Presence of BUMT for SSO feature</DESC>
+   </PARA>
+
+<!--  BIS Component's parameters and resource keys -->
+   <PARA xsi:type="PString" Key="BIS">
+       <DEF_VALUE>true</DEF_VALUE>  
+<!--   <DEF_VALUE>true</DEF_VALUE> -->
+       <DESC>Presence of the addon component BIS</DESC>
+   </PARA> 
+   <PARA xsi:type="PResource" Key="PARA_BISADM_USER">
+      <DEF_VALUE>BIS_ADMIN</DEF_VALUE>
+      <DESC>BIS schema owner from the resource list</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_BIS_USER">
+      <DEF_VALUE>BIS</DEF_VALUE>
+      <DESC>BIS user from the resource list</DESC>
+   </PARA>
+   <!-- iX Collection Feature 296675 [Begin] -->
+   <PARA xsi:type="PString" Key="BIS_IXC">
+       <DEF_VALUE>false</DEF_VALUE>  
+       <DESC>Presence of the iX Collections BIS Integration</DESC>
+   </PARA> 
+   <!-- iX Collection Feature 296675 [End] -->
+
+<!--  MX Component's parameters and resource keys -->
+   <PARA xsi:type="PString" Key="MX">
+       <DEF_VALUE>true</DEF_VALUE>
+       <DESC>Presence of the component MX</DESC>
+   </PARA> 
+   <PARA xsi:type="PResource" Key="PARA_MXADM_USER">
+      <DEF_VALUE>MX_ADMIN</DEF_VALUE>
+      <DESC>MX schema owner from the resource list</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_MX_USER">
+      <DEF_VALUE>MX</DEF_VALUE>
+      <DESC>MX user from the resource list</DESC>
+   </PARA>
+
+   <PARA xsi:type="PResource" Key="PARA_MXADM_BSCS">
+      <DEF_VALUE>MX_ADMIN_BSCS</DEF_VALUE>
+      <DESC>MX schema owner from the resource list in BSCS database</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_MX_BSCS">
+      <DEF_VALUE>MX_BSCS</DEF_VALUE>
+      <DESC>MX user from the resource list in BSCS database</DESC>
+   </PARA>
+
+   <PARA xsi:type="PResource" Key="PARA_MXADM_UDR">
+      <DEF_VALUE>MX_ADMIN_UDR</DEF_VALUE>
+      <DESC>MX schema owner from the resource list in UDR database</DESC>
+   </PARA>
+   <PARA xsi:type="PResource" Key="PARA_MX_UDR">
+      <DEF_VALUE>MX_UDR</DEF_VALUE>
+      <DESC>MX user from the resource list in UDR database</DESC>
+   </PARA>
+
+<!--  CRM Component's parameters and resource keys -->
+   <PARA xsi:type="PString" Key="CRM">
+       <DEF_VALUE>false</DEF_VALUE>  
+       <DESC>Presence of the addon component CRM</DESC>
+   </PARA> 
+
+<!--        WMS & OMS resource keys    -->
+<PARA xsi:type="PResource" Key="PARA_OMSADM_USER" >
+      <DEF_VALUE>OMS_ADMIN</DEF_VALUE>
+      <DESC>Name of the OMS Resource key from the resource list.</DESC>
+   </PARA>
+<PARA xsi:type="PResource" Key="PARA_WMSADM_USER" >
+      <DEF_VALUE>WMS_ADMIN</DEF_VALUE>
+      <DESC>Name of the WMS Resource key from the resource list.</DESC>
+   </PARA>
+<PARA xsi:type="PResource" Key="PARA_WMS_USER" >
+      <DEF_VALUE>WMS</DEF_VALUE>
+      <DESC>Name of the WMS Resource key from the resource list.</DESC>
+   </PARA>
+<PARA xsi:type="PResource" Key="PARA_JBPM_USER" >
+      <DEF_VALUE>JBPM</DEF_VALUE>
+      <DESC>Name of the JBPM Resource key from the resource list.</DESC>
+   </PARA>
+<PARA xsi:type="PResource" Key="PARA_JBPMADM_USER" >
+      <DEF_VALUE>JBPM_ADMIN</DEF_VALUE>
+      <DESC>Name of the JBPMADM Resource key from the resource list.</DESC>
+   </PARA>
+
+<!--   Oracle Application parameters   -->
+   <PARA xsi:type="PString" Key="PARA_USER_FIS">
+      <DEF_VALUE>FIS</DEF_VALUE>
+      <DESC>Name of the database user in the BSCS database to be used to support ORA</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PW_FIS">
+      <DEF_VALUE>FIS</DEF_VALUE>
+      <DESC>Password of the PARA_USER_FIS user</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_USER_FIS_ORA">
+      <DEF_VALUE>BSCS</DEF_VALUE>
+      <DESC>Name of the database user in the ORA database to be used to support  connection with BSCS database and to store local data</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PW_FIS_ORA">
+      <DEF_VALUE>BSCS</DEF_VALUE>
+      <DESC>Password of the PARA_USER_FIS_ORA user</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="ORA_DB_NAME">
+      <DEF_VALUE>ORA_DB_name</DEF_VALUE>
+      <DESC>Name of the database where is Oracle Application installed</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_ORA_TO_BSCS_LINK">
+      <DEF_VALUE>BSCS_DB_LINK</DEF_VALUE>
+      <DESC>Name of the database link between ORA and BSCS databases, stored on the ORA side</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_BSCS_TO_ORA_LINK">
+      <DEF_VALUE>FIS_DB_LINK</DEF_VALUE>
+      <DESC>Name of the database link between BSCS and ORA databases, stored on the BSCS side</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_TRANS_SOURCE">
+      <DEF_VALUE> TRANS_SOURCE </DEF_VALUE>
+      <DESC>Oracle Applications transaction source name</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_SET_BOOK_ID">
+      <DEF_VALUE> SET_BOOK_ID </DEF_VALUE>
+      <DESC>Oracle Applications set of books ID</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_SALES_REPR_NUM">
+      <DEF_VALUE> SALES_REPR_NUM </DEF_VALUE>
+      <DESC>Oracle Applications sales representative number for the IOHO</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_ORA_CM">
+      <DEF_VALUE> ORA_CM </DEF_VALUE>
+      <DESC>Conversion of OHSTATUS for a credit memo to the corresponding Oracle Application code for the IOHO</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_ORA_IC">
+      <DEF_VALUE> ORA_IC </DEF_VALUE>
+      <DESC>Conversion of OHSTATUS for incoming credit memos to the corresponding Oracle Application code for the IOHO</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_ORA_II">
+      <DEF_VALUE> ORA_II </DEF_VALUE>
+      <DESC>Conversion of OHSTATUS for incoming invoice to the corresponding Oracle Application code for the IOHO</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_ORA_IN">
+      <DEF_VALUE> ORA_IN </DEF_VALUE>
+      <DESC>Conversion of OHSTATUS for an invoice to the corresponding Oracle Application code for the IOHO</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PROFILE_CLASS_FLATCUST">
+      <DEF_VALUE> PROFILE_CLASS_FLATCUST </DEF_VALUE>
+      <DESC>Oracle Applications profile class for flat subscribers</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_PROFILE_CLASS_LACC">
+      <DEF_VALUE> PROFILE_CLASS_LACC </DEF_VALUE>
+      <DESC>Oracle Applications profile class for large accounts</DESC>
+   </PARA>
+<!--                Parallel mode parameters           -->
+   <PARA xsi:type="PNumber" Key="LOW">
+      <DEF_VALUE>1</DEF_VALUE>
+      <DESC Language="US">Used for the parallel migration of the small tables</DESC>
+   </PARA>
+   <PARA xsi:type="PNumber" Key="MEDIUM">
+      <DEF_VALUE>1</DEF_VALUE>
+      <DESC Language="US">Used for the parallel migration of the medium size tables</DESC>
+   </PARA>
+   <PARA xsi:type="PNumber" Key="HIGH">
+      <DEF_VALUE>1</DEF_VALUE>
+      <DESC Language="US">Used for the parallel migration of the huge tables</DESC>
+   </PARA>
+<!--                XML export-import parameters           -->
+   <PARA xsi:type="PString" Key="PARA_FILE_NAME">
+      <DEF_VALUE>NULL</DEF_VALUE>
+      <DESC Language="US">Used in ExportXML module</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_INCLUDE_XML_TABLES">
+      <DEF_VALUE>NULL</DEF_VALUE>
+      <DESC Language="US">Used in ExportXML and ExecuteXML modules</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_EXCLUDE_XML_TABLES">
+      <DEF_VALUE>NULL</DEF_VALUE>
+      <DESC Language="US">Used in ExportXML and ExecuteXML modules</DESC>
+   </PARA>
+
+<!--       Sample Setup parameters      -->
+
+<!--     BSCS Sample Setup     -->
+   <PARA xsi:type="PString" Key="BSCS_SAMPLE_SETUP">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Add message routing sample configuration. Calling this script will remove your old exsiting settings and add
+ the new configuration as a whole.  As default, the call of sample configuration is deactivated.
+      </DESC>
+   </PARA>
+<!-- Selection of VMD sample setup - only one configurations can be set to TRUE -->
+   <PARA xsi:type="PString" Key="VMD_DONGLE">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Creates VMD sample setup for Dongle</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="VMD_ERICSSON">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Creates VMD sample setup for Ericsson</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="VMD_NORTEL">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Creates VMD sample setup for Nortel</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="VMD_CAI">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Creates VMD sample setup for CAI</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="VMD_AFP">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC>Creates VMD CCN Account Finder Provisioning setup</DESC>
+   </PARA>
+
+<!-- PN 290671: per default the separation of FU append tables is enabled  -->
+   <PARA xsi:type="PString" Key="FU_TABLE_SEPARATION">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Separate FU append tables</DESC>
+   </PARA>
+<!--  Optional in BSCS iX, but Mandatory in BSCS iX R2 Component's Parameters  -->
+   <PARA xsi:type="PString" Key="DIAMETER_NOT_INSTALLED">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Presence of the feature diameter_protocol_support_for_SDPX</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PXSC_NOT_INSTALLED">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Presence of the component PXSC</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="SX_NOT_INSTALLED">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Presence of the component Internet self care (SX)</DESC>
+   </PARA>
+<!--                UDR migration strategy parameters           -->
+   <PARA xsi:type="PString" Key="UPDATE_STRATEGY">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC Language="US">Used for the Update Strategy by UDR migration</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="TRANSFER_STRATEGY">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC Language="US">Used for the Transfer Strategy by UDR migration</DESC>
+   </PARA>
+<!--  UDR/BIR table names to be used for the Transfer Strategy  -->
+   <PARA xsi:type="PString" Key="PARA_UDR_LT_NEW_TABLE_NAME">
+      <DEF_VALUE>UDR_LT_NEW</DEF_VALUE>
+      <DESC Language="US">The name of the table to be pointed with synonym RTX_LT</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_UDR_ST_NEW_TABLE_NAME">
+      <DEF_VALUE>UDR_ST_NEW</DEF_VALUE>
+      <DESC Language="US">The name of the table to be pointed with synonym RTX_ST</DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_BI_ACC_NEW_TABLE_NAME">
+      <DEF_VALUE>BI_ACCOUNTS_NEW</DEF_VALUE>
+      <DESC Language="US">The name of the table to be pointed with synonym BI_ACCOUNTS</DESC>
+   </PARA>
+<!--                UDR table partition parameters           -->
+   <PARA xsi:type="PDate" Key="PARA_UDR_SUM_LT_PARTHIGHVALUE" >
+      <DEF_VALUE>SYSDATE</DEF_VALUE>
+      <DESC Language="US">The date representing high partition value
+                          for the table UDR_SUM_LT in format "YYYY-MM-DD"
+      </DESC>
+   </PARA>
+   <PARA xsi:type="PDate" Key="PARA_UDR_SUM_ST_PARTHIGHVALUE" >
+      <DEF_VALUE>SYSDATE</DEF_VALUE>
+      <DESC Language="US">The date representing high partition value
+                          for the table UDR_SUM_ST in format "YYYY-MM-DD"
+      </DESC>
+   </PARA>
+   <PARA xsi:type="PDate" Key="PARA_BI_ACC_NEW_PARTHIGHVALUE" >
+      <DEF_VALUE>SYSDATE</DEF_VALUE>
+      <DESC Language="US">The date representing high partition value
+                          for the table name defined with the parameter key BI_ACCOUNTS_NEW
+                          in format "YYYY-MM-DD"
+      </DESC>
+   </PARA>
+
+<!-- PN 302859 -->
+  <PARA xsi:type="PString" Key="SOI_SERVER_PROXY">
+      <DEF_VALUE>true</DEF_VALUE>
+      <DESC>Use CMS Proxy feature </DESC>
+   </PARA>
+   <PARA xsi:type="PString" Key="PARA_JAVA_SOI_SERVER_USER">
+      <DEF_VALUE>JAVASERVER</DEF_VALUE>
+      <DESC Language="US">The name of the user CMS uses to connect to the database</DESC>
+   </PARA>
+
+<!--   Additional parameter for BSCS database              -->
+   <PARA xsi:type="PString" Key="BSCS_DROP_COLUMNS">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC Language="US">Drop all unused columns physically from the BSCS tables during the upgrade of the database</DESC>
+   </PARA>
+
+<!--   Additional parameter for UDR database              -->
+   <PARA xsi:type="PString" Key="UDR_DROP_COLUMNS">
+      <DEF_VALUE>false</DEF_VALUE>
+      <DESC Language="US">Drop all unused columns physically from the UDR/RTX tables during the upgrade of the database</DESC>
+   </PARA>
+
+<!-- For the migration of pre activated prepaid contracts
+     please give here the RATEPLAN.SHDES of a OCC Rateplan -->
+  <PARA xsi:type="PString" Key="PARA_Rateplan">
+      <DEF_VALUE>NULL</DEF_VALUE>
+      <DESC>Public Key of OCC Ratplan</DESC>
+  </PARA>
+
+<!-- For the migration of Interconnect Solution
+     please give here the GL Accounts to be used for the Rateplans -->
+  <PARA xsi:type="PString" Key="PARA_ACCGLCODE">
+      <DEF_VALUE>300000</DEF_VALUE>
+      <DESC>Access charge gl-code of Rateplan</DESC>
+  </PARA>
+      <PARA xsi:type="PString" Key="PARA_SUBGLCODE">
+      <DEF_VALUE>300000</DEF_VALUE>
+      <DESC>Subscription charge gl-code of Rateplan</DESC>
+  </PARA>
+      <PARA xsi:type="PString" Key="PARA_USGGLCODE">
+      <DEF_VALUE>300000</DEF_VALUE>
+      <DESC>Usage gl-code of Rateplan</DESC>
+  </PARA>
+  <PARA xsi:type="PString" Key="PARA_GLCODE_DISC">
+      <DEF_VALUE>400000</DEF_VALUE>
+      <DESC>Gl-code changes due to Discoutns for the Rateplan</DESC>
+  </PARA>
+  <PARA xsi:type="PString" Key="PARA_ACCGLCODE_MINCOM">
+      <DEF_VALUE>300600</DEF_VALUE>
+      <DESC>Access charge gl-code minimum commitments for the Rateplan</DESC>
+  </PARA>
+      <PARA xsi:type="PString" Key="PARA_SUBGLCODE_MINCOM">
+      <DEF_VALUE>300700</DEF_VALUE>
+      <DESC>Subscription charge minimum commitmentsgl-code for the Rateplan</DESC>
+  </PARA>
+      <PARA xsi:type="PString" Key="PARA_USGGLCODE_MINCOM">
+      <DEF_VALUE>300800</DEF_VALUE>
+      <DESC>Usage gl-code minimum commitments for the Rateplan</DESC>
+  </PARA>
+  
+<!-- For the migration of Prepaid Lifecycle Profile
+     please give here the Lifecyle to be used -->
+  <PARA xsi:type="PString" Key="PARA_LIFECYCLE">
+      <DEF_VALUE>CS_LC</DEF_VALUE>
+      <DESC>Short Description of Lifecycle taken from LC_DEFINITON</DESC>
+  </PARA>
+
+</DMF_PARAMETER_LIST>

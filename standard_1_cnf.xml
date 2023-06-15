@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+       Origins: LHS Telekommunikation GmbH & Co KG
+
+        Author: R&D Database Team, Dreieich
+
+          Date: 12-Jul-2004
+
+       Version: "@(#) ./lhsj_main/bscs/dmf/resource/setup/standard_1_cnf.xml, , BSCSIX_16.0_GA, BSCSIX_16.0_GA_151205 65151e2151680dd4b5e273ad65cfe1aa26546d92 4-Dec-2015"
+
+   FileVersion: "65151e2151680dd4b5e273ad65cfe1aa26546d92"
+
+     Component: "%C%"
+
+       Release: "BSCSIX_16.0_GA"
+
+         Level: "BSCSIX_16.0_GA_151205"
+
+       Purpose: Configuration file
+
+  Copyright (c) 2004 LHS Telekommunikation GmbH & Co. KG
+
+  The copyright in this work is vested in LHS.
+  The information contained in this work (either in whole or in part)
+  is confidential and must not be modified, reproduced, disclosed or
+  disseminated to others or used for purposes other than that for which
+  it is supplied, without the prior written permission of LHS.
+  If this work or any part hereof is furnished to a third party by
+  virtue of a contract with that party, use of this work by such party
+  shall be governed by the express contractual terms between LHS, which
+  is party to that contract and the said party.
+
+  The information in this document is subject to change without notice
+  and should not be construed as a commitment by LHS. LHS assumes no
+  responsibility for any errors that may appear in this document. With
+  the appearance of a new version of this document all older versions
+  become invalid.
+
+  All rights reserved
+-->
+<DMF_CONFIGURATION xmlns="BSS:Telco:Main:DataMigrationFramework" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="BSS:Telco:Main:DataMigrationFramework DMF_Configuration.xsd">
+   <MODULE_LIST>
+      <MODULE Name="ExecuteMDF.pm">
+         <DESC>Execution module used to load MDF files into the DMF repository.</DESC>
+      </MODULE>
+      <MODULE Name="ExecutePM.pm">
+         <DESC>Execution module used to load a dynamic perl module.  This means that the migration script itself is a user defined PERL library serving the MigControl execution API.</DESC>
+      </MODULE>
+      <MODULE Name="ExecuteXML.pm">
+         <DESC>Execution module used to load baseline setup data stored in xml format in the tables.</DESC>
+      </MODULE>
+      <MODULE Name="ExportXML.pm">
+         <DESC>Execution module used to download baseline setup data stored in the tables in XML files.</DESC>
+      </MODULE>
+      <MODULE Name="ExecuteSQL.pm"> 
+         <DESC>Execution module for standard SQL files. The SQL files are started inside an sqlplus session using the @@ syntax.</DESC>
+      </MODULE>
+      <MODULE Name="ExecutePLSQL.pm">
+         <DESC>Execution module for one PL/SQL block.</DESC>
+      </MODULE>
+      <MODULE Name="ExecuteCTL.pm">
+         <DESC>Execution module for sqlloader files.</DESC>
+      </MODULE>
+      <MODULE Name="ExecutePM.pm">
+         <DESC>Automaticaly link module given as 1. parameter and call its method: process().</DESC>
+      </MODULE>
+      <MODULE Name="ExecutePRG.pm">
+         <DESC>Execution module for everything what is not recognized by regular expresion. It send a command direct to the system</DESC>
+      </MODULE>
+      <MODULE Name="ExecuteMIG.pm">
+         <DESC>Execution module for DMF maintenance. It is called hardcoded, not by regular expression.</DESC>
+      </MODULE>
+   </MODULE_LIST>
+   <METHOD_LIST>
+      <!-- Sequence of Methods inside  Method_list is very important!!!  
+     Priority depreciate from top downwards.
+     All regular expressions are allowed, except *.pm, which is hardcoded - used for user defined libraries
+-->
+      <METHOD Name="SQL_LOAD_PACK" 
+              Module="ExecuteSQL.pm"
+              IncludeFile="login.sql">
+         <FILE_REGEXP>(.*\.spb$)|(.*\.sph$)|(.*\.spp$)|(.*spb\.sql$)|(.*sph\.sql$)|(.*spp\.sql$)</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="PLSQL" Module="ExecutePLSQL.pm">
+         <FILE_REGEXP>.*plb\.sql$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="SQL" 
+              Module="ExecuteSQL.pm" 
+              IncludeFile="login.sql">
+         <FILE_REGEXP>.*\.sql$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="MDF" Module="ExecuteMDF.pm">
+         <FILE_REGEXP>.*_mdf\.xml$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="XML_DOWNLOAD" Module="ExportXML.pm">
+         <FILE_REGEXP>.*_map\.xml$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="XML" Module="ExecuteXML.pm">
+         <FILE_REGEXP>.*_dat\.xml$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="CTL" Module="ExecuteCTL.pm">
+         <FILE_REGEXP>(.*\.ctl$)|(.*\.dat$)</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="PERL" Module="ExecutePM.pm">
+         <FILE_REGEXP>.*\.pm$</FILE_REGEXP>
+      </METHOD>
+      <METHOD Name="MIG" Module="ExecuteMIG.pm">
+         <FILE_REGEXP>MIGC_HARD_CODED</FILE_REGEXP>
+      </METHOD>
+      <!-- EXE Method has to be last in the list. It is used for all unrecognized files.
+-->
+      <METHOD Name="EXE" Module="ExecutePRG.pm">
+         <FILE_REGEXP>.*</FILE_REGEXP>
+      </METHOD>
+   </METHOD_LIST>
+</DMF_CONFIGURATION>
