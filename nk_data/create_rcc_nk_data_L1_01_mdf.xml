@@ -8,7 +8,7 @@
     ReInitialize="true">
 
 
-	<EMS Extension=".sql">MAPPING_TABLES_DLL.sql</EMS>
+	<EMS Extension=".sql">MAPPING_TABLES_DLL</EMS>
 	<EMS Extension=".sql">LOADING_TARIFF_DLL</EMS>
 
 
